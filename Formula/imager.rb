@@ -212,6 +212,7 @@ class Imager < Formula
     # Build & install
     # -----------------------------
     system "bash", "-c", <<~EOS
+      cd #{src_dir} &&
       export gagsrcdir="#{src_dir}" &&
       source admin/gildas-env.sh -o openmp &&
       make -C packages -j1 &&
