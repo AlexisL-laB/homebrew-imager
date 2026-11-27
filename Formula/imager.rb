@@ -214,7 +214,7 @@ class Imager < Formula
     system "bash", "-c", <<~EOS
       cd imager-src-#{MY_VERSION} &&
       source admin/gildas-env.sh -o openmp &&
-      make -j1 &&
+      make -j#{ENV.make_jobs} &&
       make install
     EOS
 
@@ -241,6 +241,7 @@ class Imager < Formula
     # Installation des wrappers imager et viewer
     install_wrapper("imager")
     install_wrapper("viewer")
+    install_wrapper("class")
 
     # DEBUG
     # List of installed files
