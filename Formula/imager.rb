@@ -136,7 +136,7 @@ class Imager < Formula
 
   desc "Radio-interferometry data analysis software"
   homepage "https://imager.oasu.u-bordeaux.fr"
-  url "https://share.oasu.u-bordeaux.fr/imager/imager-#{MY_VERSION}.tgz"
+  url "https://share.oasu.u-bordeaux.fr/imager/imager-#{MY_VERSION}.tar.xz"
   version VERSION
 
   #####################
