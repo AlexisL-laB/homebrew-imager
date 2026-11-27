@@ -200,7 +200,7 @@ class Imager < Formula
     # -----------------------------
     # Configure files
     # -----------------------------
-    adminsrc_dir = buildpath
+    src_dir = buildpath/"imager-src-nov26"
     # return unless adminsrc_dir.directory?
 
     # Dir.chdir(adminsrc_dir) do
@@ -212,8 +212,7 @@ class Imager < Formula
     # Build & install
     # -----------------------------
     system "bash", "-c", <<~EOS
-      cd imager-src-#{MY_VERSION} &&
-      export gagsrcdir="imager-src-#{MY_VERSION}" &&
+      export gagsrcdir="#{src_dir}" &&
       source admin/gildas-env.sh -o openmp &&
       make -C packages -j1 &&
       make -j#{ENV.make_jobs} &&
