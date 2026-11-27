@@ -215,6 +215,7 @@ class Imager < Formula
       cd #{src_dir} &&
       export gagsrcdir="#{src_dir}" &&
       source admin/gildas-env.sh -o openmp &&
+      make -C admin -j1 &&          # ← ou la cible exacte trouvée par le grep
       make -C packages -j1 &&
       make -j#{ENV.make_jobs} &&
       make install
