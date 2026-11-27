@@ -212,7 +212,7 @@ class Imager < Formula
     # Build & install
     # -----------------------------
     system "bash", "-c", <<~EOS
-      source admin/imager-env.sh -o openmp &&
+      source admin/gildas-env.sh -o openmp &&
       make -j#{ENV.make_jobs} &&
       make install
     EOS
