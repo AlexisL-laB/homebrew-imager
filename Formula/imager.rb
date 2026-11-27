@@ -200,13 +200,13 @@ class Imager < Formula
     # -----------------------------
     # Configure files
     # -----------------------------
-    adminsrc_dir = buildpath/
-    return unless adminsrc_dir.directory?
+    adminsrc_dir = buildpath
+    # return unless adminsrc_dir.directory?
 
-    Dir.chdir(adminsrc_dir) do
-      system "bash", "-c", "source substitute.compile.sh"
-      # NOTE: substitute variables for compilation
-    end
+    # Dir.chdir(adminsrc_dir) do
+    #   system "bash", "-c", "source substitute.compile.sh"
+    #   # NOTE: substitute variables for compilation
+    # end
 
     # -----------------------------
     # Build & install
