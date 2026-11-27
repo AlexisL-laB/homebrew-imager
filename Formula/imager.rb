@@ -141,7 +141,7 @@ class Imager < Formula
 
   #####################
   # TO UPDATE #########
-  sha256 "6f89e25d94d7997e76f96becd60724c370456bd54369192cbe8f8c8489227757"
+  sha256 "7f58c469074617e6b79e041f94bd944302ffb7669c43e81034992d4d026ad1f9"
   #####################
 
   license "MIT" # TODO: Update licence ; BSD-3-Clause ? MIT ?
