@@ -124,7 +124,7 @@ class Imager < Formula
 
   #####################
   # TO UPDATE #########
-  MY_VERSION = "nov25"
+  MY_VERSION = "nov26"
   # Source version comment
   # source_version = "4.6-03"
   #####################
@@ -148,7 +148,7 @@ class Imager < Formula
 
   # Check new version?
   livecheck do
-    skip "Upstream versions use a non-numeric month-based scheme (e.g. nov25)"
+    skip "Upstream versions use a non-numeric month-based scheme (e.g. nov26)"
   end
 
   #--------------
@@ -165,7 +165,7 @@ class Imager < Formula
   depends_on "cfitsio" # Manipulation de fichiers FITS
   depends_on "fftw" # Transformés de Fourier discrètes
   depends_on "gdk-pixbuf" # Chargement et manipulation d'images pour gtk2
-  depends_on "gtk+" # Interface graphique GTK2
+  depends_on "gtk+3" # Interface graphique GTK2
   depends_on "harfbuzz" # Rendu de polices vectorielles
   depends_on "libpng" # Manipulation de fichiers png
 
@@ -200,7 +200,7 @@ class Imager < Formula
     # -----------------------------
     # Configure files
     # -----------------------------
-    adminsrc_dir = buildpath/"Admin-Source"
+    adminsrc_dir = buildpath/
     return unless adminsrc_dir.directory?
 
     Dir.chdir(adminsrc_dir) do
